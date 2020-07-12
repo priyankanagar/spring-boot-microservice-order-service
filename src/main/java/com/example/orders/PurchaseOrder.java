@@ -59,4 +59,27 @@ public class PurchaseOrder {
         return orderDetails;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        PurchaseOrder that = (PurchaseOrder) o;
+
+        return new org.apache.commons.lang3.builder.EqualsBuilder()
+                .append(id, that.id)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new org.apache.commons.lang3.builder.HashCodeBuilder(17, 37)
+                .append(id)
+                .toHashCode();
+    }
 }

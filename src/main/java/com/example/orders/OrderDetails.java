@@ -48,4 +48,28 @@ public class OrderDetails {
                 ", itemAmount=" + itemAmount +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        OrderDetails that = (OrderDetails) o;
+
+        return new org.apache.commons.lang3.builder.EqualsBuilder()
+                .append(id, that.id)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new org.apache.commons.lang3.builder.HashCodeBuilder(17, 37)
+                .append(id)
+                .toHashCode();
+    }
 }
