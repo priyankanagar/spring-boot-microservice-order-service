@@ -1,4 +1,4 @@
-package com.example.accessingdatajpa;
+package com.example.orders;
 
 import java.util.ArrayList;
 import org.springframework.security.core.userdetails.User;

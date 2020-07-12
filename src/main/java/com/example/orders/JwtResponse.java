@@ -1,4 +1,4 @@
-package com.example.accessingdatajpa;
+package com.example.orders;
 
 import java.io.Serializable;
 

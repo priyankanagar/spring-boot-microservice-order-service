@@ -1,4 +1,4 @@
-package com.example.accessingdatajpa;
+package com.example.orders;
 
 import org.springframework.data.repository.CrudRepository;
 
