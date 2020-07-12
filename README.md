@@ -22,14 +22,14 @@ Steps:
 1. Download the source code in your local
 2. Unzip the code and open a terminal at the folder 
 3. Run the command: mvn spring-boot:run 
-4. Once the app is up, open a REST API client app like Postman and run the following commands:
-    4.1. Call POST method on localhost:8080/authenticate with the following payload:
+4. Once the app is up, open a REST API client app like Postman.
+5. Call POST method on localhost:8080/authenticate with the following payload:
      {
       "username": "iamavaliduser",
       "password": "password"
     }
     Copy the token in the response. We will use it in the next step
-    4.2. Call POST method on localhost:8080/authenticate with the following payload:
+6. Call POST method on localhost:8080/authenticate with the following payload:
         Header: Key: Authorization Value Bearer <token from previous step>
         Sample Body: 
         {
@@ -46,4 +46,4 @@ Steps:
           ]
       }
      Note down the orderId in the response. We will use it in the next step
-  4.3. Call POST method on localhost:8080/orders/{orderId from previous step} and Header: Key: Authorization Value Bearer <token from step i>. You should see the            order created in step ii.
+7. Call POST method on localhost:8080/orders/{orderId from previous step} and Header: Key: Authorization Value Bearer <token from step i>. You should see the            order created in step ii.
