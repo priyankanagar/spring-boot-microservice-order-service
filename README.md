@@ -29,7 +29,7 @@ Steps:
       "password": "password"
     }
     Copy the token in the response. We will use it in the next step
-6. Call POST method on localhost:8080/authenticate with the following payload:
+6. Call GET method on localhost:8080/authenticate with the following payload:
         Header: Key: Authorization Value Bearer <token from previous step>
         Sample Body: 
         {
