@@ -29,7 +29,7 @@ Steps:
       "password": "password"
     }
     Copy the token in the response. We will use it in the next step
-6. Call GET method on localhost:8080/authenticate with the following payload:
+6. Call POST method on localhost:8080/orders with the following payload:
         Header: Key: Authorization Value Bearer <token from previous step>
         Sample Body: 
         {
@@ -46,4 +46,4 @@ Steps:
           ]
       }
      Note down the orderId in the response. We will use it in the next step
-7. Call POST method on localhost:8080/orders/{orderId from previous step} and Header: Key: Authorization Value Bearer <token from step i>. You should see the            order created in step ii.
+7. Call GET method on localhost:8080/orders/{orderId from previous step} and Header: Key: Authorization Value Bearer <token from step 5>. You should see the            order created in step 6.
